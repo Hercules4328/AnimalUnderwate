@@ -1,0 +1,649 @@
+-- Inicializando a Orion Library
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+-- Criando a interface principal
+local Window = OrionLib:MakeWindow({
+    Name = "| ANIMAL UNDERWATER 🦈 | BRASIL 🇧🇷 | ",
+    HidePremium = false,
+    SaveConfig = true,
+    ConfigFolder = "MeuScriptConfig"
+})
+
+-- Adicionando uma aba
+local Tab = Window:MakeTab({
+    Name = "🌎 AutoFarm",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+-- Adicionando o toggle para ANTI-AFK
+local toggleAntiAFK = false
+Tab:AddToggle({
+    Name = "🛡 ANTI-AFK",
+    Default = false,
+    Callback = function(Value)
+        toggleAntiAFK = Value
+        if toggleAntiAFK then
+            loadstring(game:HttpGet(('https://pastebin.com/raw/uJeXqPp6')))()
+        end
+    end
+})
+-- Adicionando o toggle para Nível Rápido
+local toggleSpeed = false
+Tab:AddToggle({
+    Name = "⚡ Nível Rápido",
+    Default = false,
+    Callback = function(Value)
+        toggleSpeed = Value
+        while toggleSpeed and wait() do
+            local args = { [1] = { ["action"] = "heart", ["reward"] = "ValOctopus2" } }
+            game:GetService("ReplicatedStorage"):WaitForChild("DamageEvent"):FireServer(unpack(args))
+            local args = { [1] = { ["action"] = "heart", ["reward"] = "ValOctopus1" } }
+            game:GetService("ReplicatedStorage"):WaitForChild("DamageEvent"):FireServer(unpack(args))
+            local args = { [1] = { ["action"] = "heart", ["reward"] = "ValStingray2" } }
+            game:GetService("ReplicatedStorage"):WaitForChild("DamageEvent"):FireServer(unpack(args))
+            local args = { [1] = { ["action"] = "heart", ["reward"] = "ValStingray1" } }
+            game:GetService("ReplicatedStorage"):WaitForChild("DamageEvent"):FireServer(unpack(args))
+            wait()
+        end
+    end
+})
+-- Adicionando o toggle para Treinamento nível 1
+local toggle1 = false
+Tab:AddToggle({
+    Name = "💪 Treinamento nível 1",
+    Default = false,
+    Callback = function(Value)
+        toggle1 = Value
+        while toggle1 and wait() do
+            game:GetService("ReplicatedStorage").DamageEvent:FireServer({
+                ["multiply"] = 1,
+                ["action"] = "hit",
+                ["enemyHum"] = workspace.dummies.TrainingDummy1.Humanoid
+            })
+        end
+    end
+})
+
+-- Adicionando o toggle para Treinamento nível 250
+local toggle2 = false
+Tab:AddToggle({
+    Name = "💪 Treinamento nível 250",
+    Default = false,
+    Callback = function(Value)
+        toggle2 = Value
+        while toggle2 and wait() do
+            game:GetService("ReplicatedStorage").DamageEvent:FireServer({
+                ["multiply"] = 2,
+                ["action"] = "hit",
+                ["enemyHum"] = workspace.dummies.TrainingDummy2.Humanoid
+            })
+        end
+    end
+})
+
+-- Adicionando o toggle para Treinamento nível 500
+local toggle3 = false
+Tab:AddToggle({
+    Name = "💪 Treinamento nível 500",
+    Default = false,
+    Callback = function(Value)
+        toggle3 = Value
+        while toggle3 and wait() do
+            game:GetService("ReplicatedStorage").DamageEvent:FireServer({
+                ["multiply"] = 2,
+                ["action"] = "hit",
+                ["enemyHum"] = workspace.dummies.TrainingDummy3.Humanoid
+            })
+        end
+    end
+})
+
+-- Adicionando o toggle para Treinamento nível 1000
+local toggle4 = false
+Tab:AddToggle({
+    Name = "💪 Treinamento nível 1,000",
+    Default = false,
+    Callback = function(Value)
+        toggle4 = Value
+        while toggle4 and wait() do
+            game:GetService("ReplicatedStorage").DamageEvent:FireServer({
+                ["multiply"] = 2,
+                ["action"] = "hit",
+                ["enemyHum"] = workspace.dummies.TrainingDummy4.Humanoid
+            })
+        end
+    end
+})
+
+-- Adicionando o toggle para Treinamento nível 2000
+local toggle5 = false
+Tab:AddToggle({
+    Name = "💪 Treinamento nível 2,000",
+    Default = false,
+    Callback = function(Value)
+        toggle5 = Value
+        while toggle5 and wait() do
+            game:GetService("ReplicatedStorage").DamageEvent:FireServer({
+                ["multiply"] = 2,
+                ["action"] = "hit",
+                ["enemyHum"] = workspace.dummies.TrainingDummy5.Humanoid
+            })
+        end
+    end
+})
+-- Adicionando o toggle para Treinamento nível 4000
+local toggle6 = false
+Tab:AddToggle({
+    Name = "💪 Treinamento nível 4,000",
+    Default = false,
+    Callback = function(Value)
+        toggle6 = Value
+        while toggle6 and wait() do
+            game:GetService("ReplicatedStorage").DamageEvent:FireServer({
+                ["multiply"] = 2,
+                ["action"] = "hit",
+                ["enemyHum"] = workspace.dummies.TrainingDummy6.Humanoid
+            })
+        end
+    end
+})
+-- Adicionando o toggle para Treinamento nível 8,000
+local toggle7 = false
+Tab:AddToggle({
+    Name = "💪 Treinamento nível 8,000",
+    Default = false,
+    Callback = function(Value)
+        toggle7 = Value
+        while toggle7 and wait() do
+            game:GetService("ReplicatedStorage").DamageEvent:FireServer({
+                ["multiply"] = 2,
+                ["action"] = "hit",
+                ["enemyHum"] = workspace.dummies.TrainingDummy7.Humanoid
+            })
+        end
+    end
+})
+-- Adicionando o toggle para Treinamento nível 16,000
+local toggle8 = false
+Tab:AddToggle({
+    Name = "💪 Treinamento nível 16,000",
+    Default = false,
+    Callback = function(Value)
+        toggle8 = Value
+        while toggle8 and wait() do
+            game:GetService("ReplicatedStorage").DamageEvent:FireServer({
+                ["multiply"] = 2,
+                ["action"] = "hit",
+                ["enemyHum"] = workspace.dummies.TrainingDummy8.Humanoid
+            })
+        end
+    end
+})
+-- Adicionando o toggle para Treinamento nível 26,000
+local toggle9 = false
+Tab:AddToggle({
+    Name = "💪 Treinamento nível 26,000",
+    Default = false,
+    Callback = function(Value)
+        toggle9 = Value
+        while toggle9 and wait() do
+            game:GetService("ReplicatedStorage").DamageEvent:FireServer({
+                ["multiply"] = 2,
+                ["action"] = "hit",
+                ["enemyHum"] = workspace.dummies.TrainingDummy9.Humanoid
+            })
+        end
+    end
+})
+-- Adicionando o toggle para Treinamento nível 36,000
+local toggle10 = false
+Tab:AddToggle({
+    Name = "💪 Treinamento nível 36,000",
+    Default = false,
+    Callback = function(Value)
+        toggle10 = Value
+        while toggle10 and wait() do
+            game:GetService("ReplicatedStorage").DamageEvent:FireServer({
+                ["multiply"] = 2,
+                ["action"] = "hit",
+                ["enemyHum"] = workspace.dummies.TrainingDummy10.Humanoid
+            })
+        end
+    end
+})
+-- Adicionando uma nova aba
+local BossTab = Window:MakeTab({
+    Name = "🦈 Chefões",
+    Icon = "rbxassetid://4483345998",  -- Substitua pelo ícone desejado
+    PremiumOnly = false
+})
+-- Adicionando o toggle para Matar Crocodilo
+local toggleCrocodile = false
+BossTab:AddToggle({
+    Name = "🐊 Matar Crocodilo",
+    Default = false,
+    Callback = function(Value)
+        toggleCrocodile = Value
+        if toggleCrocodile then
+            -- Função para atacar o Crocodilo Boss assim que ele aparecer
+            local function AttackCrocodileBoss()
+                while toggleCrocodile and wait() do
+                    local crocodileBoss = workspace:FindFirstChild("NPC")
+                    if crocodileBoss then
+                        crocodileBoss = crocodileBoss:FindFirstChild("CROCODILEBOSS")
+                        if crocodileBoss and crocodileBoss:FindFirstChild("Humanoid") then
+                            game:GetService("ReplicatedStorage").DamageEvent:FireServer({
+                                ["multiply"] = 1,
+                                ["action"] = "hit",
+                                ["enemyHum"] = crocodileBoss.Humanoid
+                            })
+                        end
+                    end
+                end
+            end
+            
+            -- Inicia a função para atacar o Crocodilo Boss
+            AttackCrocodileBoss()
+        end
+    end
+})
+-- Adicionando o toggle para Matar Caranguejo
+local toggleCrab = false
+BossTab:AddToggle({
+    Name = "🦀 Matar Caranguejo",
+    Default = false,
+    Callback = function(Value)
+        toggleCrab = Value
+        if toggleCrab then
+            -- Função para atacar o Crabboss assim que ele aparecer
+            local function AttackCrabboss()
+                while toggleCrab and wait() do
+                    local crabboss = workspace:FindFirstChild("NPC")
+                    if crabboss then
+                        crabboss = crabboss:FindFirstChild("CRABBOSS")
+                        if crabboss and crabboss:FindFirstChild("Humanoid") then
+                            game:GetService("ReplicatedStorage").DamageEvent:FireServer({
+                                ["multiply"] = 1,
+                                ["action"] = "hit",
+                                ["enemyHum"] = crabboss.Humanoid
+                            })
+                        end
+                    end
+                end
+            end
+            
+            -- Inicia a função para atacar o Crabboss
+            AttackCrabboss()
+        end
+    end
+})
+-- Adicionando o toggle para Matar Polvo
+local toggleOctopus = false
+BossTab:AddToggle({
+    Name = "🦑 Matar Polvo",
+    Default = false,
+    Callback = function(Value)
+        toggleOctopus = Value
+        if toggleOctopus then
+            -- Função para atacar o OctopusBoss
+            local function AttackOctopusBoss()
+                if workspace:FindFirstChild("NPC") and workspace.NPC:FindFirstChild("OCTOPUSBOSS") then
+                    local octopusBoss = workspace.NPC.OCTOPUSBOSS
+                    local humanoid = octopusBoss:FindFirstChild("Humanoid")
+                    
+                    -- Ataca o Humanoid do OCTOPUSBOSS se ele estiver spawnado
+                    if humanoid and humanoid.Health > 0 then
+                        game:GetService("ReplicatedStorage").DamageEvent:FireServer({
+                            ["multiply"] = 1,
+                            ["action"] = "hit",
+                            ["enemyHum"] = humanoid
+                        })
+                    end
+                end
+            end
+
+            -- Loop para monitorar o spawn do OctopusBoss
+            while toggleOctopus and wait(1) do
+                -- Verifica se o OctopusBoss existe
+                if workspace:FindFirstChild("NPC") and workspace.NPC:FindFirstChild("OCTOPUSBOSS") then
+                    AttackOctopusBoss()
+                end
+            end
+        end
+    end
+})
+-- Adicionando o toggle para Matar Tubarão
+local toggleShark = false
+BossTab:AddToggle({
+    Name = "🦈 Matar Tubarão",
+    Default = false,
+    Callback = function(Value)
+        toggleShark = Value
+        if toggleShark then
+            -- Função para atacar o SharkBoss
+            local function AttackSharkBoss()
+                if workspace:FindFirstChild("NPC") and workspace.NPC:FindFirstChild("SHARKBOSS") then
+                    local sharkBoss = workspace.NPC.SHARKBOSS
+                    local humanoid = sharkBoss:FindFirstChild("Humanoid")
+                    
+                    -- Ataca o Humanoid do SHARKBOSS se ele estiver spawnado
+                    if humanoid and humanoid.Health > 0 then
+                        game:GetService("ReplicatedStorage").DamageEvent:FireServer({
+                            ["multiply"] = 1,
+                            ["action"] = "hit",
+                            ["enemyHum"] = humanoid
+                        })
+                    end
+                end
+            end
+
+            -- Loop para monitorar o spawn do SharkBoss
+            while toggleShark and wait(1) do
+                -- Verifica se o SharkBoss existe
+                if workspace:FindFirstChild("NPC") and workspace.NPC:FindFirstChild("SHARKBOSS") then
+                    AttackSharkBoss()
+                end
+            end
+        end
+    end
+})
+-- Adicionando o toggle para Matar Tartaruga
+local toggleTurtle = false
+BossTab:AddToggle({
+    Name = "🐢 Matar Tartaruga",
+    Default = false,
+    Callback = function(Value)
+        toggleTurtle = Value
+        if toggleTurtle then
+            -- Função para atacar o TurtleBoss
+            local function AttackTurtleBoss()
+                if workspace:FindFirstChild("NPC") and workspace.NPC:FindFirstChild("TURTLEBOSS") then
+                    local turtleBoss = workspace.NPC.TURTLEBOSS
+                    local humanoid = turtleBoss:FindFirstChild("Humanoid")
+                    
+                    -- Ataca o Humanoid do TURTLEBOSS se ele estiver spawnado
+                    if humanoid and humanoid.Health > 0 then
+                        game:GetService("ReplicatedStorage").DamageEvent:FireServer({
+                            ["multiply"] = 1,
+                            ["action"] = "hit",
+                            ["enemyHum"] = humanoid
+                        })
+                    end
+                end
+            end
+
+            -- Loop para monitorar o spawn do TurtleBoss
+            while toggleTurtle and wait(1) do
+                -- Verifica se o TurtleBoss existe
+                if workspace:FindFirstChild("NPC") and workspace.NPC:FindFirstChild("TURTLEBOSS") then
+                    AttackTurtleBoss()
+                end
+            end
+        end
+    end
+})
+-- Criando a aba "⚔ Batalha"
+local BattleTab = Window:MakeTab({
+    Name = "⚔ Batalha",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+-- Adicionando o toggle "🗡 Mata todo Mundo" na aba "⚔ Batalha"
+local toggleAttack = false
+BattleTab:AddToggle({
+    Name = "🗡 Matar todo Mundo",
+    Default = false,
+    Callback = function(Value)
+        toggleAttack = Value
+        if toggleAttack then
+            _G.Stop = false
+            local maxDistance = 1000000  -- Distância máxima para considerar jogadores próximos (em studs)
+
+            -- Função para selecionar um jogador aleatório
+            local function getRandomPlayer()
+                local players = game:GetService("Players"):GetPlayers()
+                local localPlayer = game.Players.LocalPlayer
+
+                -- Remove o jogador local da lista
+                local otherPlayers = {}
+                for _, player in pairs(players) do
+                    if player ~= localPlayer then
+                        table.insert(otherPlayers, player)
+                    end
+                end
+
+                if #otherPlayers == 0 then
+                    return nil
+                end
+
+                -- Escolhe um jogador aleatório da lista
+                local randomIndex = math.random(1, #otherPlayers)
+                return otherPlayers[randomIndex]
+            end
+
+            -- Função para simular a tecla "Q" sendo pressionada
+            local function pressQ()
+                game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.Q, false, game)
+                wait(0.1)  -- Duração do pressionamento da tecla
+                game:GetService("VirtualInputManager"):SendKeyEvent(false, Enum.KeyCode.Q, false, game)
+            end
+
+            -- Função principal para atacar e trocar de jogador
+            local function attackAndSwitch()
+                local localPlayer = game.Players.LocalPlayer
+                local localPlayerChar = localPlayer.Character or localPlayer.CharacterAdded:Wait()
+
+                while toggleAttack and not _G.Stop do
+                    game:GetService("RunService").RenderStepped:Wait()
+                    if not localPlayerChar then continue end
+
+                    -- Seleciona um jogador aleatório
+                    local targetPlayer = getRandomPlayer()
+                    if targetPlayer then
+                        local char = targetPlayer.Character or workspace:FindFirstChild(targetPlayer.Name)
+                        if char and char:FindFirstChild("Humanoid") and char.Humanoid.Health > 0 then
+                            local distance = (localPlayerChar.HumanoidRootPart.Position - char.HumanoidRootPart.Position).Magnitude
+                            if distance <= maxDistance then
+                                print("Iniciando ataque ao jogador: " .. targetPlayer.Name)
+                                localPlayerChar.HumanoidRootPart.CFrame = char.HumanoidRootPart.CFrame
+                                -- Simula o pressionamento da tecla "Q"
+                                pressQ()
+                                -- Aguarda 1 segundo antes de passar para o próximo jogador
+                                wait(1)
+                            end
+                        end
+                    end
+                end
+            end
+
+            -- Inicia a função de ataque e troca de jogador
+            attackAndSwitch()
+        else
+            _G.Stop = true
+        end
+    end
+})
+-- Adicionando uma opção para selecionar o player e atacar
+BattleTab:AddTextbox({
+    Name = "📝 Nome do Jogador",
+    Default = "",  -- Nome padrão do jogador deixado em branco
+    TextChangedCallback = function(Text)
+        selectedPlayerName = Text
+    end
+})
+
+BattleTab:AddToggle({
+    Name = "🗡 Atacar Jogador Específico",
+    Default = false,
+    Callback = function(Value)
+        toggleSpecificPlayerAttack = Value
+        if toggleSpecificPlayerAttack then
+            _G.Stop = false
+            local maxDistance = 1000000  -- Distância máxima para considerar jogadores próximos (em studs)
+
+            -- Função para encontrar um jogador específico
+            local function getTargetPlayer(targetName)
+                local players = game:GetService("Players"):GetPlayers()
+                for _, player in pairs(players) do
+                    if player.Name == targetName then
+                        return player
+                    end
+                end
+                return nil
+            end
+
+            -- Função para simular a tecla "Q" sendo pressionada
+            local function pressQ()
+                game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.Q, false, game)
+                wait(0.1)  -- Duração do pressionamento da tecla
+                game:GetService("VirtualInputManager"):SendKeyEvent(false, Enum.KeyCode.Q, false, game)
+            end
+
+            -- Função principal para atacar o jogador específico
+            local function attackSpecificPlayer()
+                local localPlayer = game.Players.LocalPlayer
+                local localPlayerChar = localPlayer.Character or localPlayer.CharacterAdded:Wait()
+
+                while toggleSpecificPlayerAttack and not _G.Stop do
+                    game:GetService("RunService").RenderStepped:Wait()
+                    if not localPlayerChar then continue end
+
+                    -- Encontra o jogador específico
+                    local targetPlayer = getTargetPlayer(selectedPlayerName)
+                    if targetPlayer then
+                        local char = targetPlayer.Character or workspace:FindFirstChild(targetPlayer.Name)
+                        if char and char:FindFirstChild("Humanoid") and char.Humanoid.Health > 0 then
+                            local distance = (localPlayerChar.HumanoidRootPart.Position - char.HumanoidRootPart.Position).Magnitude
+                            if distance <= maxDistance then
+                                print("Iniciando ataque ao jogador: " .. targetPlayer.Name)
+                                localPlayerChar.HumanoidRootPart.CFrame = char.HumanoidRootPart.CFrame
+                                -- Simula o pressionamento da tecla "Q"
+                                pressQ()
+                                -- Aguarda 1 segundo antes de repetir o ataque
+                                wait(1)
+                            end
+                        end
+                    end
+                end
+            end
+
+            -- Inicia a função de ataque ao jogador específico
+            attackSpecificPlayer()
+        else
+            _G.Stop = true
+        end
+    end
+})
+-- Criando a aba "🎉 Eventos"
+local EventsTab = Window:MakeTab({
+    Name = "🎉 Eventos",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+-- Adicionando o botão "🏆 Liberar Skins do jogo (VIP 👑)" na aba "🎉 Eventos"
+EventsTab:AddButton({
+    Name = "🏆 Liberar Skins do jogo (VIP 👑)",
+    Callback = function()
+        -- Script gerado pelo TurtleSpy, feito por Intrer#0421
+
+        local ReplicatedStorage = game:GetService("ReplicatedStorage")
+        local SkinClickEvent = ReplicatedStorage.Events.SkinClickEvent
+
+        -- Loop para Stingray (1 a 12)
+        for i = 1, 12 do
+            SkinClickEvent:FireServer("Stingray" .. i, "v2")
+        end
+
+        -- Loop para Clownfish (1 a 12)
+        for i = 1, 12 do
+            SkinClickEvent:FireServer("Clownfish" .. i, "v1")
+        end
+
+        -- Loop para Axolotl (1 a 17)
+        for i = 1, 17 do
+            SkinClickEvent:FireServer("Axolotl" .. i, "v1")
+        end
+    end
+})
+-- Adiciona uma aba chamada "⚙ Admins"
+local AdminsTab = Window:MakeTab({
+    Name = "⚙ Admins",
+    Icon = "rbxassetid://4483345998",  -- Você pode alterar o ícone se desejar
+    PremiumOnly = false
+})
+
+-- Adiciona botão "🖼️ Remover Texturas" na aba "⚙ Admins"
+AdminsTab:AddButton({
+    Name = "🖼️ Remover Texturas",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-antilag-15462"))()
+    end
+})
+
+-- Adiciona botão "💬 Chat sem Tags" na aba "⚙ Admins"
+AdminsTab:AddButton({
+    Name = "💬 Chat sem Tags",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/GPpLCnQR"))()
+    end
+})
+
+-- Adiciona botão "🔧 Infinity Yield" na aba "⚙ Admins"
+AdminsTab:AddButton({
+    Name = "🔧 Infinity Yield",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    end
+})
+
+-- Adiciona botão "🔒 Servidor Privado" na aba "⚙ Admins"
+AdminsTab:AddButton({
+    Name = "🔒 Servidor Privado",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/A4r1pHJY"))()
+    end
+})
+-- Adiciona uma aba chamada "👑 Criador"
+local CriadorTab = Window:MakeTab({
+    Name = "👑 Criador",
+    Icon = "rbxassetid://4483345998",  -- Você pode alterar o ícone se desejar
+    PremiumOnly = false
+})
+-- Adiciona um botão chamado "🔗 Link do meu canal (EthusScriptYT)" na aba "👑 Criador"
+CriadorTab:AddButton({
+    Name = "🔗 Link do meu canal (@EthusScriptYT)",
+    Callback = function()
+        -- Copia o link para a área de transferência
+        setclipboard("https://youtube.com/@ethusscripts?si=6N23pYQBzDsBic_w")
+    end
+})
+-- Adiciona um botão chamado "🔗 Link do meu Instagram (@Pla4utin)" na aba "👑 Criador"
+CriadorTab:AddButton({
+    Name = "🔗 Link do meu Instagram (@Pl4utin)",
+    Callback = function()
+        -- Copia o link para a área de transferência
+        setclipboard("https://www.instagram.com/pl4utin?igsh=NnhiOTIwdmFzZG5k")
+    end
+})
+-- Adiciona um botão chamado "🔗 Link do meu Grupo (@WhatsApp)" na aba "👑 Criador"
+CriadorTab:AddButton({
+    Name = "🔗 Link do meu Grupo (WhatsApp)",
+    Callback = function()
+        -- Copia o link para a área de transferência
+        setclipboard("https://chat.whatsapp.com/CLnQng8oumzBmnpxic8Ioa")
+    end
+})
+-- Iniciando a interface
+OrionLib:Init()
+-- Função para enviar a mensagem de spam no chat
+local function enviarMensagemSpam()
+    local mensagem = "Eu uso o script do ETHUS esse script e o MELHOR script do BRAZIL para achar basta pesquisar por ETHUS SCRIPT"
+    -- Supondo que você tenha uma função para enviar a mensagem no chat
+    game:GetService("Chat"):Chat(game.Players.LocalPlayer.Character.Head, mensagem, Enum.ChatColor.Red)
+end
+
+-- Loop para enviar a mensagem a cada 1 minuto (60 segundos)
+while true do
+    enviarMensagemSpam()
+    wait(60) -- Espera 60 segundos antes de repetir
+end
